@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+<meta name=viewport content="user-scalable=no,width=device-width" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+
+<script>
+function initialize()
+{
+var mapProp = {
+  center:new google.maps.LatLng(15.133615,120.592068),
+  zoom:18,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</head> 
+
+		<style>
+			img {
+			max-width: 100%;
+			}
+			
+			#about {
+			text-align: justify;			
+			}
+			
+			#googleMap{
+			position: fixed;			
+			}
+		</style>
+
+<body> 
+
+<div data-role=page id="main" data-content-theme="b"> <!-- main page -->
+
+		<div data-role=header id="heading"> <!--logo header -->
+   		<h1>Mark's Pizza</h1> 
+   		<img src="imgs/img1.png"> 
+  		</div>
+  													
+		
+  		
+  		<div data-role="collapsible" data-content-theme="b" id="pizzas" data-iconpos="right">
+   			<h3>Our Pizzas</h3>
+			   	 
+    			<ul data-role=listview>
+      			<li data-role=list-divider>Pizzas</li>
+      			<li><img src=imgs/cheese.jpg /><h1> CHEESY CHEESE</h1><p>S - PHP 100: M - PHP 150: L - PHP 200</p></li>
+      			<li><img src=imgs/combo.jpg /><h1> COMBINATION</h1><p>S - PHP 120: M - PHP 170: L - PHP 220</p></li>
+      			<li><img src=imgs/salami.jpg /><h1> YUMMY SALAMI</h1><p>S - PHP 110: M - PHP 160: L - PHP 210</p></li>			
+		</div>
+		
+		<div data-role="collapsible" data-content-theme="b" id="pasta" data-iconpos="right">
+   			<h3>Our Pasta</h3>
+			   	 
+    			<ul data-role=listview>
+      			<li data-role=list-divider>Pastas</li>
+      			<li><img src=imgs/spag.jpg /><h1> SPAGHETTI MEATBALLS</h1><p>S - PHP 100: M - PHP 150: L - PHP 200</p></li>
+      			<li><img src=imgs/carbo.jpg /><h1> CARBONARA</h1><p>S - PHP 120: M - PHP 170: L - PHP 220</p></li>
+      			<li><img src=imgs/pesto.jpg /><h1> PESTO PASTA</h1><p>S - PHP 110: M - PHP 160: L - PHP 210</p></li>			
+		</div>
+  		
+  		
+  		<div data-role="collapsible" data-content-theme="b" id="drinks" data-iconpos="right">
+   			<h3>Our Special Drinks</h3>
+			   	 
+    			<ul data-role=listview>
+      			<li data-role=list-divider>Blended Drinks</li>
+      			<li><img src=imgs/choco2.jpg /><h1> VANILLA CHOCO SHAKE</h1><p>S - PHP 100: M - PHP 150: L - PHP 200</p></li>
+      			<li><img src=imgs/choco1.jpg /><h1> STRAWBERRY SHAKE</h1><p>S - PHP 120: M - PHP 170: L - PHP 220</p></li>
+      			<li><img src=imgs/choco3.jpg /><h1> CARAMEL BANANA SHAKE</h1><p>S - PHP 110: M - PHP 160: L - PHP 210</p></li>			
+		</div>
+		
+		
+  		<div data-role="collapsible" data-content-theme="b" id="aboutus" data-iconpos="right">
+   			<h3>About Us</h3>
+   			<p id="about">
+   			Mark's Pizaa House is the first pizzeria established in Angeles City. Mark's opened for business on 7 July 1961 in Sto Rosario St., Angeles City, where the business has remained since.
+			</br></br>
+			Mark's was originally owned by Salvatore Della Bruna, who operated the business in partnership with Franco Fera and in 1968 with Silvio Tuli and Salvatore Mercogliano.
+			</br></br>
+			Successful, and well respected, business man Mario Bandera also played a large part. In 1983 the business was purchased by the present owner and Managing Director, Sami Mazloum.
+			Silvana Mercogliano, the wife of former owner Salvatore Mercogliano, credited Mark's with changing the image of Sto Rosario Street from an area with primary appeal to Locals.
+			</br></br>
+			In 2007 Mark's Pizza House was inducted as the second member of the World Pizza Hall of Fame, after Lombardi's Pizza in New York City, New York.
+			</p>
+		</div>
+		
+		<div data-role="collapsible" data-content-theme="b" id="contact" data-iconpos="right">
+   			<h3>Contact Us</h3>
+   			<p id="about">
+   				Bale Herencia Compound</br>
+				Sto Rosario St., Angeles City, 2009</br>
+				Tel: 888 - 8888; 322 - 3232</br>
+				Email: markspizzahouse@gwapo.com
+				
+				<div id="googleMap" style="width:250px;height:250px;"></div>
+								
+				
+   			</p>
+   			
+		</div>
+
+		<div data-role=footer id="foot" data-position="fixed"> <!-- footer -->
+   		<h1>powered by: markkevinmeneses</h1> 
+  		</div>
+
+
+</div>
+
+
+</body>
+</html> 
